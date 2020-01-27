@@ -1,0 +1,5 @@
+package br.com.bibliotecasilva.biblioteca.model;
+
+public class Livro {
+
+}
