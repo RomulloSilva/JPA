@@ -1,5 +1,0 @@
-package br.com.bibliotecasilva.biblioteca.dao;
-
-public interface ILivroBD {
-
-}
