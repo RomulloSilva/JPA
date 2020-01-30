@@ -8,5 +8,6 @@ public interface IAlunoService {
 	
 	public List<Aluno> recuperarTodos();
 	public Aluno recuperarPorRa(int ra);
+	public void matricularAluno(Aluno aluno);
 
 }

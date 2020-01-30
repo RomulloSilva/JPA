@@ -23,5 +23,10 @@ public class AlunoService implements IAlunoService {
 	public Aluno recuperarPorRa(int ra) {
 		return repo.findById(ra).get();
 	}
+	
+	@Override
+	public void matricularAluno(Aluno aluno) {
+		repo.save(aluno);
+	}
 
 }

@@ -60,6 +60,14 @@ public class Curso {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	public List<Aluno> getAluno() {
+		return aluno;
+	}
+	public void setAluno(List<Aluno> aluno) {
+		this.aluno = aluno;
+	}
+	
+	
 	
 	
 	

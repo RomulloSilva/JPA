@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.universidadeba.universidade.modell.Aluno;
@@ -25,7 +27,14 @@ public class AlunoController {
 	}
 	
 	
-	@GetMapping("?aluno/{ra}")
+	@PostMapping("/matricula")
+	public ResponseEntity<Aluno> matricula(@RequestBody Aluno aluno){
+		servico.matricularAluno(aluno);
+		return ResponseEntity.ok(aluno);
+	}
+	
+	
+	@GetMapping("/aluno/{ra}")
 	public ResponseEntity<Aluno> mostrarPeloRa(@PathVariable int ra){
 		Aluno a = servico.recuperarPorRa(ra);
 		if(a!=null) {
